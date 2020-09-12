@@ -12,27 +12,71 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-3">
+                <form action="">
+                    <div class="form-group mt-3">
+                        <label for="">Filtrar por género</label>
+                        <select class="custom-select" name="" id="gender-select">
+                            <option value="all">Todos</option>
+                            <option value="female">Femenino</option>
+                            <option value="male">Masculino</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-3">
+                <form action="">
+                    <div class="form-group mt-3">
+                        <label for="">Filtrar por país</label>
+                        <select class="custom-select" name="" id="country-select">
+                            <option value="all">México</option>
+                            <option value="female">Canadá</option>
+                            <option value="male">Brasil</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
                 <form action="" class="bg-dark p-3 mt-3">
                     <div class="form-group">
-                        <label class="text-white" for="">Nombre:</label>
+                        <label class="text-white" for="">Nombre Completo:</label>
                         <input id="name" type="text" class="form-control" value="Homero">
                     </div>
                     <div class="form-group">
-                        <label class="text-white" for="">Apellido:</label>
-                        <input id="last-name" type="text" class="form-control" value="Simpson">
+                        <label class="text-white" for="">País:</label>
+                        <input id="country" type="text" class="form-control" value="Las reliquias de la muerte">
                     </div>
                     <div class="form-group">
-                        <label class="text-white" for="">Libro:</label>
-                        <input id="book" type="text" class="form-control" value="Las reliquias de la muerte">
+                        <label class="text-white" for="">Género:</label>
+                        <input type="radio" name="gender" value="male" checked>Masculino
+                        <input type="radio" name="gender" value="female">Femenino
                     </div>
+                    <div class="form-group">
+                        <label class="text-white" for="">Fecha de nacimiento:</label>
+                        <input type="date" id="birth-date">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white" for="">Foto:</label>
+                        <input id="picture" type="text" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white" for="">Reseña:</label>
+                        <textarea id="bio" class="form-control"></textarea>
+                    </div>
+
+                    
                     <div id="save-button" class="btn btn-primary ml-auto">Guardar Personaje</div>
                 </form>
             </div>
-            <div class="col-12 col-md-6">
-                <table class="table table-dark mt-3">
+            <div class="col-12 col-md-8 mt-3">
+                <div id="characters-row" class="row">
+                    
+                </div>
+                <!--table class="table table-dark mt-3">
                     <thead>
                       <tr>
                         <th scope="col">Nombre Completo</th>
@@ -43,7 +87,7 @@
                     <tbody id="characters-table">
                       
                     </tbody>
-                  </table>
+                  </table-->
             </div>
         </div>
     </div>
